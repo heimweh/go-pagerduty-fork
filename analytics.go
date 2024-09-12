@@ -64,6 +64,49 @@ type AnalyticsFilter struct {
 
 // AnalyticsData represents the structure of the aggregated analytics we have available.
 type AnalyticsData struct {
+	AcknowledgedUserIDs       []string `json:"acknowledged_user_ids"`
+	AcknowledgedUserNames     []string `json:"acknowledged_user_names"`
+	AcknowledgedmentCount     int      `json:"acknowledgedment_count"`
+	ActiveUserCount           int      `json:"active_user_count"`
+	AssignedUserIDs           []string `json:"assigned_user_ids"`
+	AssignedUserNames         []string `json:"assigned_user_names"`
+	AssignmentCount           int      `json:"assignment_count"`
+	AutoResolved              bool     `json:"auto_resolved"`
+	BusinessHourInterruptions int      `json:"business_hour_interruptions"`
+	CreatedAt                 string   `json:"created_at"`
+	UpdatedAt                 string   `json:"updated_at"`
+	Description               string   `json:"description"`
+	EngagedSeconds            int      `json:"engaged_seconds"`
+	EngagedUserCount          int      `json:"engaged_user_count"`
+	EscalationCount           int      `json:"escalation_count"`
+	EscalationPolicyID        string   `json:"escalation_policy_id"`
+	EscalationPolicyName      string   `json:"escalation_policy_name"`
+	ID                        string   `json:"id"`
+	IncidentNumber            string   `json:"incident_number"`
+	JoinedUserIDs             []string `json:"joined_user_ids"`
+	JoinedUserNames           []string `json:"joined_user_names"`
+	Major                     bool     `json:"major"`
+	ManualEscalationCount     int      `json:"manual_escalation_count"`
+	OffHourInterruptions      int      `json:"off_hour_interruptions"`
+	PriorityID                string   `json:"priority_id"`
+	PriorityName              string   `json:"priority_name"`
+	PriorityOrder             int      `json:"priority_order"`
+	ReassignmentCount         int      `json:"reassignment_count"`
+	ResolvedAt                string   `json:"resolved_at"`
+	ResolvedByUserID          string   `json:"resolved_by_user_id"`
+	ResolvedByUserName        string   `json:"resolved_by_user_name"`
+	SecondsToEngage           int      `json:"seconds_to_engage"`
+	SecondsToFirstAck         int      `json:"seconds_to_first_ack"`
+	SecondsToMobilize         int      `json:"seconds_to_mobilize"`
+	SecondsToResolve          int      `json:"seconds_to_resolve"`
+	SleepHourInterruptions    int      `json:"sleep_hour_interruptions"`
+	SnoozedSeconds            int      `json:"snoozed_seconds"`
+	Status                    string   `json:"status"`
+	TimeoutEscalationCount    int      `json:"timeout_escalation_count"`
+	TotalInterruptions        int      `json:"total_interruptions"`
+	TotalNotifications        int      `json:"total_notifications"`
+	Urgency                   string   `json:"urgency"`
+
 	ServiceID                      string  `json:"service_id,omitempty"`
 	ServiceName                    string  `json:"service_name,omitempty"`
 	TeamID                         string  `json:"team_id,omitempty"`
